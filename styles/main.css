@@ -1,0 +1,271 @@
+/* ============================================================
+   Qinde Chen — personal academic homepage
+   Minimal academic style. Accent: #527bbd
+   ============================================================ */
+
+:root {
+    --accent: #527bbd;
+    --accent-dark: #022b6d;
+    --ink: #1d2025;
+    --ink-soft: #4a5159;
+    --muted: #8a9099;
+    --line: #e6e8ec;
+    --bg: #ffffff;
+    --bg-soft: #f7f8fa;
+    --chip: #eef2f8;
+    --radius: 10px;
+    --maxw: 860px;
+    --serif: Georgia, "Times New Roman", "Songti SC", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "PingFang SC", "Microsoft YaHei", Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--bg-soft); -webkit-text-size-adjust: 100%; }
+
+body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.65;
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: var(--maxw);
+    padding: 0 28px 80px;
+    box-shadow: 0 0 0 1px var(--line);
+}
+
+@media (max-width: 600px) {
+    body { padding: 0 18px 60px; }
+}
+
+/* ---------- Navigation ---------- */
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 0;
+    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: saturate(180%) blur(8px);
+    border-bottom: 1px solid var(--line);
+}
+
+.nav .brand {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: 0.2px;
+}
+
+.nav .brand span { color: var(--accent); }
+
+.nav-links {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 0.92rem;
+    padding: 6px 12px;
+    border-radius: 999px;
+    transition: background 0.15s, color 0.15s;
+}
+
+.nav-links a:hover { background: var(--chip); color: var(--accent-dark); }
+.nav-links a.active { background: var(--accent); color: #fff; }
+
+/* ---------- Typography ---------- */
+h1, h2, h3 { font-family: var(--serif); color: var(--ink); line-height: 1.25; }
+
+h1 { font-size: 1.9rem; margin: 0.2em 0 0.1em; }
+h1 .zh { color: var(--accent); font-weight: 600; }
+
+h2 {
+    font-size: 1.25rem;
+    color: var(--accent);
+    margin: 2.2em 0 0.7em;
+    padding-bottom: 0.35em;
+    border-bottom: 1px solid var(--line);
+}
+
+h3 { font-size: 1.05rem; margin: 1.4em 0 0.4em; }
+
+p { margin: 0 0 0.9em; color: var(--ink-soft); }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+.subtle { color: var(--muted); font-size: 0.9rem; }
+
+/* ---------- Hero / profile ---------- */
+.hero { display: flex; gap: 28px; align-items: flex-start; padding-top: 18px; }
+.hero-text { flex: 1; min-width: 0; }
+.hero-text .role { color: var(--accent); font-weight: 600; font-family: var(--serif); margin: 0.1em 0 0.6em; }
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    flex: 0 0 150px;
+    border-radius: 14px;
+    object-fit: cover;
+    box-shadow: 0 4px 18px rgba(30, 40, 70, 0.14);
+}
+
+@media (max-width: 560px) {
+    .hero { flex-direction: column-reverse; align-items: center; text-align: center; }
+    .hero-text .links, .hero-text .affil { text-align: center; }
+}
+
+.affil { margin: 0.4em 0; line-height: 1.7; }
+.affil a { color: var(--ink-soft); }
+.affil a:hover { color: var(--accent); }
+
+.email-line { margin: 0.7em 0 0; color: var(--ink-soft); font-size: 0.95rem; }
+.email-line b { color: var(--ink); }
+
+.links { margin-top: 0.8em; display: flex; flex-wrap: wrap; gap: 8px; }
+.links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.88rem;
+    padding: 5px 12px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--ink-soft);
+    background: var(--bg-soft);
+    transition: all 0.15s;
+}
+.links a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+/* ---------- Education list ---------- */
+.edu { list-style: none; padding: 0; margin: 0; }
+.edu li {
+    padding: 0.5em 0 0.5em 18px;
+    border-left: 2px solid var(--line);
+    margin-left: 4px;
+}
+.edu li .deg { color: var(--accent); font-weight: 700; font-family: var(--serif); }
+.edu li .meta { color: var(--muted); font-size: 0.9rem; }
+
+/* ---------- Publication cards ---------- */
+.pub {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+}
+.pub:last-child { border-bottom: none; }
+
+.pub .tag {
+    align-self: start;
+    font-family: var(--serif);
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--chip);
+    border-radius: 8px;
+    padding: 5px 10px;
+    text-align: center;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.pub .title { color: var(--ink); font-weight: 600; }
+.pub .title a { color: var(--ink); }
+.pub .title a:hover { color: var(--accent); }
+.pub .authors { font-size: 0.92rem; margin: 0.25em 0; }
+.pub .me { color: var(--accent-dark); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+.pub .venue { font-size: 0.9rem; color: var(--muted); margin: 0; }
+
+.badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #b5530e;
+    background: #fdf0e3;
+    border-radius: 6px;
+    padding: 1px 7px;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+.badge.a { color: #1d6f42; background: #e7f5ec; }
+
+@media (max-width: 600px) {
+    .pub { gap: 12px; }
+}
+
+/* ---------- Research detail (research.html) ---------- */
+.work {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 22px 24px;
+    margin: 22px 0;
+    background: var(--bg);
+    transition: box-shadow 0.18s, border-color 0.18s;
+}
+.work:hover { box-shadow: 0 6px 24px rgba(30, 40, 70, 0.08); border-color: #d3d8e0; }
+.work h3 { margin-top: 0; }
+.work .work-meta { font-size: 0.9rem; color: var(--muted); margin-bottom: 0.8em; }
+.work .tldr {
+    border-left: 3px solid var(--accent);
+    background: var(--bg-soft);
+    padding: 0.7em 1em;
+    border-radius: 0 8px 8px 0;
+    margin: 0.6em 0 1em;
+    color: var(--ink-soft);
+}
+.work ul { margin: 0.4em 0 0.6em; padding-left: 1.2em; }
+.work li { margin: 0.3em 0; color: var(--ink-soft); }
+.work .role-line { font-size: 0.9rem; color: var(--ink-soft); margin-top: 0.6em; }
+.work .role-line b { color: var(--accent-dark); }
+
+/* ---------- News timeline (news.html) ---------- */
+.timeline { list-style: none; padding: 0; margin: 1em 0 0; position: relative; }
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 7px; top: 6px; bottom: 6px;
+    width: 2px;
+    background: var(--line);
+}
+.timeline li { position: relative; padding: 0 0 1.4em 34px; }
+.timeline li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 6px;
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid var(--accent);
+}
+.timeline li.dim::before { border-color: var(--muted); }
+.timeline .date { font-family: var(--serif); font-weight: 700; color: var(--accent); font-size: 0.9rem; }
+.timeline .entry { color: var(--ink-soft); margin-top: 2px; }
+
+/* ---------- Footer ---------- */
+footer {
+    margin-top: 56px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    font-size: 0.82rem;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+footer a { color: var(--muted); }
+footer a:hover { color: var(--accent); }

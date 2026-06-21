@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Research · Qinde Chen (陈钦德)</title>
+    <meta name="description" content="Plain-language summaries of Qinde Chen's research on sharding blockchains and DeFi mechanism design." />
+    <link rel="stylesheet" href="./styles/main.css" type="text/css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179394887-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-179394887-1');
+    </script>
+</head>
+
+<body>
+    <nav class="nav">
+        <a class="brand" href="./index.html">Qinde <span>Chen</span></a>
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./research.html" class="active">Research</a>
+            <a href="./news.html">News</a>
+            <a href="https://scholar.google.com.hk/citations?user=uR18XUQAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+        </div>
+    </nav>
+
+    <h1 style="margin-top:0.6em;">Research</h1>
+    <p>
+        My research sits at the intersection of <b>sharding blockchain systems</b> and <b>DeFi mechanism
+        design</b>: how to scale blockchains by splitting them into shards, and how to design the economic
+        rules so that the people who keep such systems running are paid fairly. Below are plain-language
+        summaries of each paper — what problem it tackles, what we did, and my role.
+    </p>
+
+    <h2>Lead-Author Work</h2>
+
+    <!-- WWW'26 -->
+    <article class="work">
+        <h3>LiquidityPool: Game-Theoretic Analysis of Stakeholder Revenue in Ranking-Dependent DeFi</h3>
+        <div class="work-meta">
+            ACM The Web Conference (WWW '26), 2026 · CCF-A ·
+            <a href="https://doi.org/10.1145/3774904.3792260" target="_blank" rel="noopener">ACM DL</a> ·
+            <a href="https://github.com/ChenQinde/LiquidityPool" target="_blank" rel="noopener">Code</a>
+        </div>
+        <p class="tldr">
+            In ranking-dependent DeFi protocols a stakeholder's revenue depends on how their fund balance
+            <i>ranks</i> against others, so large players consistently out-earn small ones and many
+            small-volume users are effectively shut out. We propose <b>LiquidityPool</b>, a fund-aggregation
+            protocol that lets stakeholders pool capital to participate collectively, and analyze the resulting
+            competition game-theoretically.
+        </p>
+        <ul>
+            <li>Identifies how ranking-dependent rewards disadvantage small-volume stakeholders.</li>
+            <li>Proposes LiquidityPool, a protocol that aggregates funds so small stakeholders can participate.</li>
+            <li>Models the setting as a multi-leader, multi-follower Stackelberg competition.</li>
+            <li>Shows that — unlike classical Bertrand/Cournot competition — aggregation can improve social welfare, because convex revenue functions create economies of scale.</li>
+        </ul>
+        <p class="role-line"><b>My role:</b> First author — problem formulation, protocol design, and game-theoretic analysis.</p>
+    </article>
+
+    <!-- INFOCOM'24 -->
+    <article class="work">
+        <h3>Broker2Earn: Towards Maximizing Broker Revenue and System Liquidity for Sharded Blockchains</h3>
+        <div class="work-meta">
+            IEEE INFOCOM '24, 2024 · CCF-A ·
+            <a href="https://ieeexplore.ieee.org/document/10621431/" target="_blank" rel="noopener">IEEE Xplore</a>
+        </div>
+        <p class="tldr">
+            Sharding splits a blockchain into parallel shards, but cross-shard transactions are slow because
+            they must reach consensus in two shards. Broker accounts can turn cross-shard transactions into
+            fast intra-shard ones — but only if enough users are willing to act as brokers. Broker2Earn is a
+            DeFi-style incentive mechanism that rewards users for collateralizing tokens as brokers.
+        </p>
+        <ul>
+            <li>Designs an incentive mechanism where brokers earn revenue by staking (collateralizing) tokens.</li>
+            <li>Formulates the core broker problem as revenue maximization and proves it NP-hard.</li>
+            <li>Solves it with an online approximation algorithm (relax-and-rounding) with a proven approximation ratio.</li>
+            <li>Evaluated on real-world Ethereum transactions, achieving near-optimal broker revenue and system-liquidity usage.</li>
+        </ul>
+        <p class="role-line"><b>My role:</b> First author — design, optimization formulation, and experiments.</p>
+    </article>
+
+    <!-- ASE'23 -->
+    <article class="work">
+        <h3>iASTMapper: An Iterative Similarity-Based Abstract Syntax Tree Mapping Algorithm</h3>
+        <div class="work-meta">
+            IEEE/ACM ASE '23, 2023 · CCF-A ·
+            <a href="https://ieeexplore.ieee.org/document/10298413" target="_blank" rel="noopener">IEEE Xplore</a>
+        </div>
+        <p class="tldr">
+            To understand how source code changes between two versions, tools match nodes of the program's
+            abstract syntax tree (AST). iASTMapper computes these mappings iteratively using similarity,
+            producing more accurate and stable matches than prior approaches.
+        </p>
+        <ul>
+            <li>Key insight: mappings of lower-level nodes (tokens) and higher-level nodes (statements) mutually influence each other — an effect prior tools ignore.</li>
+            <li>Iteratively maps tokens, statements, and inner-statements by similarity, connecting the three processes.</li>
+            <li>Outperforms GumTree, MTDiff, and IJM, evaluated on 210,997 file revisions from ten Java projects.</li>
+        </ul>
+        <p class="role-line"><b>My role:</b> Corresponding author — algorithm design and evaluation.</p>
+    </article>
+
+    <h2>Collaborative Work</h2>
+
+    <!-- ToN -->
+    <article class="work">
+        <h3>BrokerChain: A Blockchain Sharding Protocol by Exploiting Broker Accounts</h3>
+        <div class="work-meta">
+            IEEE Transactions on Networking, 2025 · CCF-A ·
+            <a href="https://ieeexplore.ieee.org/document/10938798" target="_blank" rel="noopener">IEEE Xplore</a>
+        </div>
+        <p class="tldr">
+            BrokerChain is the protocol foundation behind much of our broker-based work. Built for
+            account-based state sharding, it uses fine-grained state partition and account segmentation, and
+            handles cross-shard transactions through broker accounts — balancing transaction workload across
+            shards and reducing the number of cross-shard transactions (avoiding "hot shards").
+        </p>
+        <p class="role-line"><b>My role:</b> Co-author — contributed to the broker-account mechanism and analysis.</p>
+    </article>
+
+    <!-- TSC -->
+    <article class="work">
+        <h3>BlockEmulator: An Emulator Enabling to Test Blockchain Sharding Protocols</h3>
+        <div class="work-meta">
+            IEEE Transactions on Services Computing, 2025 · CCF-A ·
+            <a href="https://ieeexplore.ieee.org/document/10908689" target="_blank" rel="noopener">IEEE Xplore</a>
+        </div>
+        <p class="tldr">
+            Testing sharding protocols on real networks is hard and costly. BlockEmulator is an open
+            experimental platform that lets researchers prototype, run, and measure sharding protocols
+            (including cross-shard mechanisms) in a controlled, reproducible environment.
+        </p>
+        <p class="role-line"><b>My role:</b> Co-author — contributed to design and experimental evaluation.</p>
+    </article>
+
+    <!-- ICSE'23 -->
+    <article class="work">
+        <h3>ShellFusion: An Answer Generator for Shell Programming Tasks via Knowledge Fusion</h3>
+        <div class="work-meta">
+            IEEE/ACM ICSE '23 (Demonstrations), 2023 ·
+            <a href="https://ieeexplore.ieee.org/document/10172741" target="_blank" rel="noopener">IEEE Xplore</a>
+        </div>
+        <p class="tldr">
+            ShellFusion is a web-based tool that helps developers with shell-programming questions by fusing
+            multi-source knowledge — from Q&amp;A posts, Ubuntu Manual Pages, and TLDR tutorials — to generate
+            relevant commands, scripts, and explanations.
+        </p>
+        <p class="role-line"><b>My role:</b> Co-author.</p>
+    </article>
+
+    <!-- ICPADS'23 -->
+    <article class="work">
+        <h3>BrokerFi: A DeFi dApp Built upon Broker-based Blockchain</h3>
+        <div class="work-meta">
+            IEEE ICPADS '23, 2023 · CCF-C ·
+            <a href="https://link.springer.com/chapter/10.1007/978-981-95-3480-7_8" target="_blank" rel="noopener">SpringerLink</a>
+        </div>
+        <p class="tldr">
+            BrokerFi shows how the broker-based blockchain can support real decentralized-finance
+            applications, connecting the cross-shard liquidity ideas to a working DeFi dApp.
+        </p>
+        <p class="role-line"><b>My role:</b> Co-author.</p>
+    </article>
+
+    <!-- Survey / Magazine -->
+    <article class="work">
+        <h3>The State-of-the-Art and Promising Future of Blockchain Sharding</h3>
+        <div class="work-meta">
+            IEEE Communications Magazine 63(4), 192–198, 2024 ·
+            <a href="https://ieeexplore.ieee.org/document/10742577" target="_blank" rel="noopener">IEEE Xplore</a>
+        </div>
+        <p class="tldr">
+            A magazine-style overview of where blockchain sharding stands today — the main approaches, open
+            challenges, and where the field is heading.
+        </p>
+        <p class="role-line"><b>My role:</b> Co-author.</p>
+    </article>
+
+    <article class="work">
+        <h3>A Survey of Sharding Blockchains on Performance and Scalability</h3>
+        <div class="work-meta">International Conference on Blockchain and Trustworthy Systems (BlockSys), 105–118, 2025</div>
+        <p class="tldr">
+            A survey that organizes sharding-blockchain research around the two questions that matter most for
+            adoption: performance and scalability.
+        </p>
+        <p class="role-line"><b>My role:</b> Co-author.</p>
+    </article>
+
+    <footer>
+        <span>© 2026 Qinde Chen · Sun Yat-sen University</span>
+        <span><a href="./index.html">← Back to Home</a></span>
+    </footer>
+</body>
+
+</html>
