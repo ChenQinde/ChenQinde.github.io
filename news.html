@@ -18,17 +18,18 @@
 
 <body>
     <nav class="nav">
-        <a class="brand" href="./index.html">Qinde <span>Chen</span></a>
+        <a class="brand" href="./index.html" data-i18n="brand">Qinde <span>Chen</span></a>
         <div class="nav-links">
-            <a href="./index.html">Home</a>
-            <a href="./research.html">Research</a>
-            <a href="./news.html" class="active">News</a>
-            <a href="https://scholar.google.com.hk/citations?user=uR18XUQAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+            <a href="./index.html" data-i18n="nav.home">Home</a>
+            <a href="./research.html" data-i18n="nav.research">Research</a>
+            <a href="./news.html" class="active" data-i18n="nav.news">News</a>
+            <a href="https://scholar.google.com.hk/citations?user=uR18XUQAAAAJ&hl=en" target="_blank" rel="noopener" data-i18n="nav.scholar">Scholar</a>
+            <button class="lang-btn" type="button" data-lang-toggle aria-label="Switch language">中文</button>
         </div>
     </nav>
 
-    <h1 style="margin-top:0.6em;">News &amp; Updates</h1>
-    <p>
+    <h1 style="margin-top:0.6em;" data-i18n="news.h1">News &amp; Updates</h1>
+    <p data-i18n="news.intro">
         A running log of publications, talks, and milestones — newest first.
     </p>
 
@@ -38,16 +39,19 @@
 
         <li>
             <div class="date">Mon. YYYY</div>
-            <div class="entry">Your update here. Links: <a href="URL">like this</a>.</div>
+            <div class="entry" data-i18n="news.e.SOMEKEY">English text here.</div>
         </li>
 
+      Then add the Chinese version in i18n.js under the matching key
+      ("news.e.SOMEKEY"). If you skip the data-i18n attribute, the item
+      simply shows the same text in both languages.
       Add class="dim" to <li> for older / minor items (greys the dot).
       =========================================================================
     -->
     <ul class="timeline">
         <li>
             <div class="date">Jan. 2026</div>
-            <div class="entry">
+            <div class="entry" data-i18n="news.e.www">
                 Our paper <b>“LiquidityPool: Game-Theoretic Analysis of Stakeholder Revenue in
                 Ranking-Dependent DeFi”</b> was accepted to <b>The Web Conference (WWW '26)</b> 🎉.
                 See the <a href="./research.html">Research</a> page for a summary.
@@ -55,14 +59,14 @@
         </li>
         <li>
             <div class="date">2025</div>
-            <div class="entry">
+            <div class="entry" data-i18n="news.e.journals">
                 <b>BrokerChain</b> (IEEE Transactions on Networking) and <b>BlockEmulator</b> (IEEE
                 Transactions on Services Computing) were published — both CCF-A journals.
             </div>
         </li>
         <li>
             <div class="date">Dec. 2023</div>
-            <div class="entry">
+            <div class="entry" data-i18n="news.e.infocom">
                 Our paper <b>“Broker2Earn: Towards Maximizing Broker Revenue and System Liquidity for
                 Sharded Blockchains”</b> was accepted to <b>IEEE INFOCOM '24</b> 🎉.
                 See the <a href="./research.html">Research</a> page for a summary.
@@ -70,14 +74,14 @@
         </li>
         <li class="dim">
             <div class="date">2023</div>
-            <div class="entry">
+            <div class="entry" data-i18n="news.e.phd">
                 <b>iASTMapper</b> (ASE '23) accepted; began Ph.D. studies under Prof. Huawei Huang via the
                 combined Master's–Ph.D. program.
             </div>
         </li>
         <li class="dim">
             <div class="date">2021</div>
-            <div class="entry">
+            <div class="entry" data-i18n="news.e.be">
                 Received B.E. from the School of Computer Science and Engineering, Sun Yat-sen University, and
                 started graduate study in Software Engineering.
             </div>
@@ -85,9 +89,11 @@
     </ul>
 
     <footer>
-        <span>© 2026 Qinde Chen · Sun Yat-sen University</span>
-        <span><a href="./index.html">← Back to Home</a></span>
+        <span data-i18n="footer.copyright">© 2026 Qinde Chen · Sun Yat-sen University</span>
+        <span><a href="./index.html" data-i18n="footer.home">← Back to Home</a></span>
     </footer>
+
+    <script src="./i18n.js"></script>
 </body>
 
 </html>

@@ -85,6 +85,21 @@ body {
 .nav-links a:hover { background: var(--chip); color: var(--accent-dark); }
 .nav-links a.active { background: var(--accent); color: #fff; }
 
+.lang-btn {
+    font-family: var(--sans);
+    font-size: 0.86rem;
+    color: var(--accent);
+    background: transparent;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: 5px 12px;
+    margin-left: 4px;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    min-width: 48px;
+}
+.lang-btn:hover { background: var(--accent); color: #fff; }
+
 /* ---------- Typography ---------- */
 h1, h2, h3 { font-family: var(--serif); color: var(--ink); line-height: 1.25; }
 
