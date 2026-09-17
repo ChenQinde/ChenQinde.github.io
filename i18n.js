@@ -16,36 +16,37 @@
         "nav.research": "研究",
         "nav.news": "动态",
         "nav.scholar": "学术",
-        "footer.copyright": "© 2026 陈钦德 · 中山大学",
+        "footer.copyright": "© 2026 陈钦德 · 香港科技大学",
         "footer.home": "← 返回首页",
 
         /* ---- index: hero ---- */
-        "idx.role": "博士研究生",
-        "idx.affil": '<a href="http://xintelligence.pro/" target="_blank" rel="noopener">黄华威实验室（HuangLab）</a><br />' +
-            '<a href="https://sse.sysu.edu.cn/" target="_blank" rel="noopener">软件工程学院</a><br />' +
-            '<a href="https://www.sysu.edu.cn/" target="_blank" rel="noopener">中山大学</a>',
-        "idx.email": "<b>邮箱：</b> chenqd6@mail2.sysu.edu.cn",
+        "idx.role": "博士后研究员",
+        "idx.affil": '<a href="https://cse.hkust.edu.hk/~songguo/" target="_blank" rel="noopener">泛在智能实验室</a><br />' +
+            '<a href="https://cse.hkust.edu.hk/" target="_blank" rel="noopener">计算机科学与工程学系</a><br />' +
+            '<a href="https://hkust.edu.hk/" target="_blank" rel="noopener">香港科技大学</a>',
+        "idx.email": "<b>邮箱：</b> chenqd@ust.hk",
         "idx.btn.email": "✉ 邮件",
         "idx.btn.scholar": "🎓 谷歌学术",
         "idx.btn.research": "📄 研究",
 
         /* ---- index: sections ---- */
         "idx.h.bio": "个人简介",
-        "idx.bio": '陈钦德目前在<a href="https://sse.sysu.edu.cn/">中山大学软件工程学院（软件工程）</a>攻读博士学位，' +
-            '导师为<a href="https://sse.sysu.edu.cn/teacher/161"><b>黄华威 教授</b></a>。' +
-            '他于 2021 年获得中山大学计算机学院的学士学位，同年进入中山大学软件工程专业攻读硕士，' +
-            '师从<a href="https://sse.sysu.edu.cn/teacher/187"><b>张能 教授</b></a>，研究方向为软件工程。' +
-            '随后他通过硕博连读项目，于 2023 年开始博士阶段的研究。目前的研究兴趣主要包括' +
-            '<b>分片区块链技术</b>与 <b>DeFi 机制设计</b>。',
+        "idx.bio": '陈钦德现为<a href="https://hkust.edu.hk/">香港科技大学</a>' +
+            '<a href="https://cse.hkust.edu.hk/">计算机科学与工程学系</a>博士后研究员，' +
+            '在<a href="https://cse.hkust.edu.hk/~songguo/"><b>郭嵩 教授</b></a>指导下开展研究。' +
+            '他于 2021 年进入中山大学硕博连读项目，并于 2026 年 6 月获得软件工程博士学位，' +
+            '博士导师为<a href="https://sse.sysu.edu.cn/teacher/161"><b>黄华威 教授</b></a>；' +
+            '此前于 2021 年获得中山大学软件工程学士学位。研究兴趣包括<b>区块链系统</b>、' +
+            '<b>分布式系统</b>、<b>跨分片交易协议</b>与 <b>DeFi 机制设计</b>。',
         "idx.h.interests": "研究兴趣",
-        "idx.int.1": "分片区块链",
-        "idx.int.2": "DeFi 与机制设计",
-        "idx.int.3": "博弈论",
-        "idx.int.4": "软件工程",
-        "idx.h.edu": "教育经历",
-        "idx.edu.phd": '<span class="deg">博士</span> —— 中山大学 &nbsp;<span class="meta">2023.09 – 至今</span><br />导师：黄华威 教授',
-        "idx.edu.msc": '<span class="deg">硕士</span>（硕博连读项目）—— 中山大学 &nbsp;<span class="meta">2021.09 – 2023.08</span><br />导师：张能 教授',
-        "idx.edu.be": '<span class="deg">学士</span> —— 中山大学 &nbsp;<span class="meta">2017.09 – 2021.06</span>',
+        "idx.int.1": "区块链系统",
+        "idx.int.2": "分布式系统",
+        "idx.int.3": "跨分片交易",
+        "idx.int.4": "DeFi 与机制设计",
+        "idx.h.edu": "学术任职与教育经历",
+        "idx.appt.postdoc": '<span class="deg">博士后研究员</span> —— 香港科技大学 &nbsp;<span class="meta">2026.09 – 至今</span><br />合作导师：郭嵩 教授',
+        "idx.edu.phd": '<span class="deg">软件工程博士</span> —— 中山大学 &nbsp;<span class="meta">2021.09 – 2026.06</span><br />导师：黄华威 教授',
+        "idx.edu.be": '<span class="deg">软件工程学士</span> —— 中山大学 &nbsp;<span class="meta">2017.09 – 2021.06</span>',
         "idx.h.pubs": "学术论文",
         "idx.legend": '<span class="me">下划线</span> = 本人；* = 通讯作者。每篇工作的通俗解读见<a href="./research.html">研究</a>页面。',
 
@@ -71,6 +72,10 @@
             'iASTMapper 基于相似度迭代地计算这些映射，得到比已有方法更准确、更稳定的匹配结果。',
         "res.role.iastmapper": "<b>我的角色：</b> 通讯作者 —— 算法设计与评估。",
 
+        "res.tldr.icdcs": '跨分片交易通常需要在多个分片中等待共识，因此确认延迟显著高于分片内交易。' +
+            '该工作提出一种去中心化在线调度方法，在保证交易原子性的同时降低跨分片交易的排队延迟。',
+        "res.role.icdcs": "<b>我的角色：</b> 合作作者。",
+
         "res.tldr.brokerchain": 'BrokerChain 是我们许多 broker 相关工作的协议基础。它面向基于账户的状态分片，' +
             '采用细粒度的状态划分与账户分段，并通过 broker 账户处理跨分片交易 —— 在各分片间平衡交易负载、' +
             '减少跨分片交易数量（避免出现“热点分片”）。',
@@ -88,15 +93,29 @@
             '把跨分片流动性的思路落地为一个可运行的 DeFi dApp。',
         "res.role.brokerfi": "<b>我的角色：</b> 合作作者。",
 
+        "res.tldr.broker2balance": '该工作研究基于 broker 的分片区块链如何同时实现更高收益，' +
+            '以及在参与者之间进行更公平的收益分配。',
+        "res.role.broker2balance": "<b>我的角色：</b> 合作作者。",
+
         "res.tldr.commag": '一篇综述性文章，概览区块链分片的现状 —— 主要方法、开放挑战，以及该领域的发展方向。',
         "res.role.commag": "<b>我的角色：</b> 合作作者。",
 
         "res.tldr.blocksys": '一篇综述，围绕影响落地最关键的两个问题 —— 性能与可扩展性 —— 来梳理分片区块链的研究。',
         "res.role.blocksys": "<b>我的角色：</b> 合作作者。",
 
+        "res.tldr.blockchainai": '该综述从状态管理、分片、共识与 Layer-2、并行执行和面向应用的交易处理等方面，' +
+            '系统梳理区块链交易处理与可扩展性技术，并讨论这些技术如何支撑面向 AI 智能体的可信基础设施。',
+        "res.role.blockchainai": "<b>我的角色：</b> 合作作者。",
+
         /* ---- news page ---- */
         "news.h1": "动态与更新",
         "news.intro": "持续更新的记录 —— 论文、报告与里程碑，最新在前。",
+        "news.e.hkust": '加入<b>香港科技大学计算机科学与工程学系</b>，在泛在智能实验室与<b>郭嵩教授</b>' +
+            '合作开展博士后研究。',
+        "news.e.blockchainai": '综述论文 <b>“A Survey of Blockchain Transaction Processing and Scalability: ' +
+            'Toward a Trust Infrastructure for AI Agents”</b> 发表于期刊 <b>Blockchain</b>。',
+        "news.e.phdgrad": '获得中山大学<b>软件工程博士学位</b>。合作论文 <b>“Aiming Low-Latency Atomicity for ' +
+            'Cross-Shard Transactions in a Sharding Blockchain”</b> 发表于 <b>IEEE ICDCS \'26</b>。',
         "news.e.www": '我们的论文 <b>“LiquidityPool: Game-Theoretic Analysis of Stakeholder Revenue in ' +
             'Ranking-Dependent DeFi”</b> 被 <b>The Web Conference（WWW \'26）</b> 录用 🎉。' +
             '摘要见<a href="./research.html">研究</a>页面。',
