@@ -113,7 +113,8 @@
         "news.e.hkust": '加入<b>香港科技大学计算机科学与工程学系</b>，在泛在智能实验室与<b>郭嵩教授</b>' +
             '合作开展博士后研究。',
         "news.e.blockchainai": '综述论文 <b>“A Survey of Blockchain Transaction Processing and Scalability: ' +
-            'Toward a Trust Infrastructure for AI Agents”</b> 发表于期刊 <b>Blockchain</b>。',
+            'Toward a Trust Infrastructure for AI Agents”</b> 于 2026 年 7 月 28 日在线发表于期刊 ' +
+            '<b>Blockchain</b>（<b>2026(1):0005</b>）。',
         "news.e.phdgrad": '获得中山大学<b>软件工程博士学位</b>。合作论文 <b>“Aiming Low-Latency Atomicity for ' +
             'Cross-Shard Transactions in a Sharding Blockchain”</b> 发表于 <b>IEEE ICDCS \'26</b>。',
         "news.e.www": '我们的论文 <b>“LiquidityPool: Game-Theoretic Analysis of Stakeholder Revenue in ' +
